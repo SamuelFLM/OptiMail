@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: HTMLTemplateRender
+Version: 1.0.1
+Summary: Html template renderer
+Home-page: https://github.com/QuackCoding/HTMLTemplateRender
+Author: Aiden (Dev)
+Author-email: 
+License: UNKNOWN
+Keywords: python,HTML,template,html template renderer,HTMLTemplateRender
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: jinja2
+
+## HTMLTemplateRender
+
+
+* `Rendering html file with variables into text`
+
+<br>
+
+## Installation
+
+* Install Package Using `pip`
+   ```shell script
+   python3 pip install HTMLTemplateRender
+   ```
+
+<br>
+
+### How to use:
+
+* HTML File (test.html)
+    `Use {{ variable }} to assign value`
+   ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test</title>
+    </head>
+    <body>
+        <h1>Hey there {{ username }}</h1>
+        <h2>It's {{ day_name }}</h2>
+    </body>
+    </html>
+   ```
+
+   * Lets Render the file
+    ```python
+    from HTMLTemplateRender.renderer import render_template
+
+    context = {
+        'username': 'Anonymous',
+        'day_name': 'Sunday'
+    }
+
+    result = render_template(template_path='test.html', context=context)
+    print(result)
+    ```
+
+* Output
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test</title>
+    </head>
+    <body>
+        <h1>Hey there Anonymous</h1>
+        <h2>It's Sunday</h2>
+    </body>
+    </html>
+
+    Process finished with exit code 0
+
+    ```
+

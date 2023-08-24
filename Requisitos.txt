@@ -1,0 +1,8 @@
+Requisitos
+
+
+-Bloco para colocar mensagem ou estrutura html...
+
+-Parte para anexar documentos ou imagens
+
+-Parte para informar se e envio de email em massa ou apenas um usuario.

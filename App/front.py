@@ -1,5 +1,0 @@
-
-
-def _front():
-    
-    pass

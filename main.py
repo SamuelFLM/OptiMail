@@ -1,4 +1,4 @@
-from email_sender import Emailer
+from Email.email_sender import Emailer
 
 email = Emailer('jhonatandevaprender1@gmail.com', 'gxnxkxrvwnwbobbs')
 
