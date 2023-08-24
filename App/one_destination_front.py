@@ -154,6 +154,7 @@ def _front():
         size=(390, 840),
         margins=(0, 0),
         background_color="white",
+        icon='Img\\logo.ico',
     )
 
     while True:
