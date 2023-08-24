@@ -97,13 +97,13 @@ def _front():
                 justification="l",
                 background_color=BACKGROUND_COLOR,
                 text_color=COLOR_TITULO,
-                pad=(43,(0,20)),
-                size=(20,20),
+                pad=(43, (0, 20)),
+                size=(20, 20),
                 sbar_arrow_width=0,
-                sbar_background_color='black',
-                sbar_arrow_color='black',
-                sbar_width=0
-                
+                sbar_background_color="black",
+                sbar_arrow_color="black",
+                sbar_width=0,
+                border_width=0.5,
             )
         ],
     ]
@@ -130,23 +130,37 @@ def _front():
                 key="anexo",
                 font="inter 11 bold",
                 border_width=0,
-            )
+                disabled=True,
+                disabled_readonly_background_color=BACKGROUND_COLOR,
+                disabled_readonly_text_color=COLOR_TITULO,
+                s=(15, 10),
+            ),
+            sg.FileBrowse(
+                "Anexar",
+                pad=(0, (0, 0)),
+                button_color=("#142918", "#4BED13"),
+                font="inter 10 bold",
+                auto_size_button=True,
+            ),
+            sg.Text(
+                "",
+                background_color=BACKGROUND_COLOR,
+                pad=(20, (0, 0)),
+            ),
         ],
         [sg.HSep(pad=(43, (0, 20)))],
     ]
     rodape = [
-        sg.Image(filename='Img\\enviaroff.png', background_color=BACKGROUND_COLOR, pad=(50,(0,0)), enable_events=True, key='enviar')
+        sg.Image(
+            filename="Img\\enviaroff.png",
+            background_color=BACKGROUND_COLOR,
+            pad=(50, (0, 0)),
+            enable_events=True,
+            key="enviar",
+        )
     ]
 
-    layout = [
-        tela_notificacao,
-        ajudar,
-        destinatario,
-        titulo,
-        mensagem,
-        anexo,
-        rodape,
-    ]
+    layout = [tela_notificacao, ajudar, destinatario, titulo, mensagem, anexo, rodape]
 
     window = sg.Window(
         "OptiMail",
@@ -154,7 +168,7 @@ def _front():
         size=(390, 840),
         margins=(0, 0),
         background_color="white",
-        icon='Img\\logo.ico',
+        icon="Img\\logo.ico",
     )
 
     while True:
