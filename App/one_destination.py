@@ -16,7 +16,7 @@ def _main():
     FONT_TITULO = "inter 14"
     COLOR_TITULO = "#383838"
     BACKGROUND_COLOR = "WHITE"
-    EMAIL_ADDRESS = "contatosamudev@gmail.com"
+    EMAIL_ADDRESS = "#"
     EMAIL_PASSWORD = "#"
 
     tela_notificacao = [
