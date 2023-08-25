@@ -17,7 +17,7 @@ def _main():
     COLOR_TITULO = "#383838"
     BACKGROUND_COLOR = "WHITE"
     EMAIL_ADDRESS = "contatosamudev@gmail.com"
-    EMAIL_PASSWORD = "llwgttnqhgjwcgmu"
+    EMAIL_PASSWORD = "#"
 
     tela_notificacao = [
         sg.Image(
